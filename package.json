@@ -1,0 +1,89 @@
+{
+  "entry": {
+    "index": "./index.js"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-function-bind": "^6.13.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "next",
+    "react-router-redux-saga-model": "^0.0.44",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.0.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.9.2",
+    "react-boilerplate-app-scripts": "^0.0.26"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "start": "react-boilerplate-app-scripts start"
+  },
+  "name": "react-router-redux-saga-model-example",
+  "version": "0.0.1",
+  "react-boilerplate-app-scripts": {
+    "appSrcPath": "src",
+    "appPublicPath": "public"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-decorators-legacy"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
+      },
+      "default": {
+        "plugins": [
+          "transform-decorators-legacy"
+        ],
+        "presets": [
+          "react",
+          "es2015",
+          "stage-0"
+        ]
+      },
+      "es": {
+        "plugins": [
+          "transform-decorators-legacy"
+        ],
+        "presets": [
+          "react",
+          [
+            "es2015",
+            {
+              "modules": false
+            }
+          ],
+          "stage-0"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

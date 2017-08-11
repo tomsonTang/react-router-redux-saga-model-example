@@ -5,16 +5,24 @@ import {Link} from 'react-router-dom';
 import {BrowserRouterProvider} from 'react-router-redux-saga-model'
 import About from './view/about/index.jsx';
 import Index from './view/index/index.jsx';
+import loading from './plugins/loading.js';
+import IndexModel from './view/index/indexModel.js';
 
+const App = (sagaModel) =>{
 
-ReactDOM.render(
-  <BrowserRouterProvider>
+  sagaModel.register(IndexModel);
+
+  return (
     <div>
         <Link to="/about">关于</Link>
         <Link to="/">主页</Link>
         <Route exact path="/" component={Index}/>
         <Route path="/about" component={About}/>
     </div>
-  </BrowserRouterProvider>,
+  )
+};
+
+ReactDOM.render(
+  <BrowserRouterProvider children={App} plugins={[loading]}/>,
   document.querySelector('#root')
 );

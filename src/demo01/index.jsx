@@ -6,6 +6,7 @@ import {BrowserRouterProvider} from 'react-router-redux-saga-model'
 import About from './view/about/index.jsx';
 import Index from './view/index/index.jsx';
 import IndexModel from './view/index/indexModel.js';
+import from '../lib/promise.js';
 
 const models = [IndexModel];
 

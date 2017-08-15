@@ -7,7 +7,7 @@ import About from './view/about/index.jsx';
 import Index from './view/index/index.jsx';
 import loading from './plugins/loading.js';
 import IndexModel from './view/index/indexModel.js';
-import from '../lib/promise.js';
+import '../lib/promise.js';
 const App = (sagaModel) =>{
 
   sagaModel.register(IndexModel);

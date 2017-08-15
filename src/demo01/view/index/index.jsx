@@ -8,7 +8,6 @@ class IndexView extends React.Component {
   }
 
   render() {
-    console.debug('index页面');
     return (
       <div>
         <div>主页页面</div>
